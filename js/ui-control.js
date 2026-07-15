@@ -98,7 +98,7 @@ function escapeHtml(value) {
 // =====================================================
 
 window.copyCoords = async function(x, y, z) {
-    const text = `${x} ${y} ${z}`;
+    const text = `${x} ${z} ${y}`;
 
     try {
         if (navigator.clipboard && window.isSecureContext) {
