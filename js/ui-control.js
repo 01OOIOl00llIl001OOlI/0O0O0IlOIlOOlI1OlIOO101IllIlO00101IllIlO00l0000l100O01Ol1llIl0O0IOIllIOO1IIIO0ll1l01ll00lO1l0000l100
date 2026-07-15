@@ -157,8 +157,8 @@ function createPopupContent({
     title,
     category,
     x,
-    y,
     z,
+    y,
     effect,
     monster,
     note
@@ -226,7 +226,7 @@ function createPopupContent({
             </div>
 
             <div
-                onclick="copyCoords(${x}, ${y}, ${z})"
+                onclick="copyCoords(${x}, ${z}, ${y})"
                 style="
                     padding:8px 5px;
                     background:#333;
@@ -239,7 +239,7 @@ function createPopupContent({
                     font-size:15px;
                     font-weight:900;
                 ">
-                    ${x}, ${y}, ${z}
+                    ${x}, ${z}, ${y}
                 </div>
 
                 <div style="
@@ -289,8 +289,8 @@ function addSearchEntry({
             category,
             item.n,
             item.x,
-            item.y,
             item.z,
+            item.y,
             item.effect,
             item.monster,
             item.note
@@ -325,8 +325,8 @@ mineList.forEach(mine => {
             title,
             category: "광산",
             x: mine.x,
-            y: mine.y,
             z: mine.z,
+            y: mine.y,
             note: mine.note
         }),
         {
@@ -372,8 +372,8 @@ herbList.forEach(herb => {
             title,
             category: "약초/누룩",
             x: herb.x,
-            y: herb.y,
             z: herb.z,
+            y: herb.y,
             note: herb.note
         }),
         {
@@ -419,8 +419,8 @@ elixirList.forEach(elixir => {
             title,
             category: "영단",
             x: elixir.x,
-            y: elixir.y,
             z: elixir.z,
+            y: elixir.y,
             effect: elixir.effect,
             note: elixir.note
         }),
@@ -470,8 +470,8 @@ treasureList.forEach(treasure => {
             title,
             category: "보물",
             x: treasure.x,
-            y: treasure.y,
             z: treasure.z,
+            y: treasure.y,
             note: treasure.note
         }),
         {
@@ -525,8 +525,8 @@ jobCenterList.forEach(jobCenter => {
             title,
             category: "전직소",
             x: jobCenter.x,
-            y: jobCenter.y,
             z: jobCenter.z,
+            y: jobCenter.y,
             note: jobCenter.note
         }),
         {
@@ -578,8 +578,8 @@ huntingList.forEach(area => {
             title,
             category: "사냥터",
             x: area.x,
-            y: area.y,
             z: area.z,
+            y: area.y,
             monster: area.monster,
             note: area.note
         }),
@@ -841,8 +841,8 @@ function showSearchResults(query) {
                 font-size:10px;
             ">
                 ${entry.item.x},
-                ${entry.item.y},
-                ${entry.item.z}
+                ${entry.item.z},
+                ${entry.item.y}
             </div>
         `;
 
